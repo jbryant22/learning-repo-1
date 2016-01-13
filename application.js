@@ -1,6 +1,9 @@
 var mbaasApi = require('fh-mbaas-api');
 var express = require('express');
 var mbaasExpress = mbaasApi.mbaasExpress();
+
+console.log(' GLOBAL_USER IS :', process.env.GLOBAL_USER);
+
 var cors = require('cors');
 
 // list the endpoints which you want to make securable here
@@ -32,3 +35,4 @@ var host = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 app.listen(port, host, function() {
   console.log("App started at: " + new Date() + " on port: " + port); 
 });
+

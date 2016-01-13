@@ -47,6 +47,7 @@ module.exports = function(grunt) {
       // environment variables - see https://github.com/jsoverson/grunt-env for more information
       local: {
         FH_USE_LOCAL_DB: true,
+        GLOBAL_USER: 'evan@mac.com',
         FH_SERVICE_MAP: function() {
           /*
            * Define the mappings for your services here - for local development.
@@ -55,8 +56,7 @@ module.exports = function(grunt) {
            * or a remote instance.
            */
           var serviceMap = {
-            'SERVICE_GUID_1': 'http://127.0.0.1:8010',
-            'SERVICE_GUID_2': 'https://host-and-path-to-service'
+            'na5dnjaunlwjhdtkfhx74gdu': 'http://127.0.0.1:9001'
           };
           return JSON.stringify(serviceMap);
         }
